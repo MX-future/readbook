@@ -12,7 +12,6 @@ class HttpRequest {
     // 发送网络请求
     try {
       Response response = await dio.request<T>(url, queryParameters: params, options: options);
-      print(response);
       return response.data;
     } on DioError catch (e) {
       throw e;
